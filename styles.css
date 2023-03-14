@@ -1,0 +1,111 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+body {
+	background: rgb(30,123,129);
+	background: linear-gradient(85deg, rgba(30,123,129,1) 0%, rgba(18,83,96,1) 24%, rgba(3,42,50,1) 80%);
+}
+
+.calculator-container {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.calculator {
+	height: 400px;
+	width: 400px;
+	border-radius: 10px;
+	background-color: grey;
+	box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+}
+
+.input-container {
+	height: 20%;
+	width: 100%;
+	background-color: black;
+	color: white;
+	border-radius: 10px 10px 0 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.buttons-container {
+	height: 80%;
+	width: 95%;
+	background-color: lightgrey;
+	border-radius: 0 0 10px 10px;
+	padding: 10px;
+}
+
+.input {
+	margin-right: 10px;
+	font-size: 2rem;
+}
+
+
+.buttons {
+	height: 100%;
+	width: 100%;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	gap: 10px;
+
+}
+
+
+button {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	border: none;
+	font-size: 1.25rem;
+}
+
+button:hover {
+	filter: brightness(70%);
+	cursor: pointer;
+}
+
+.operand {
+	color: white;
+	background-color: grey;
+}
+
+.number, .decimal {
+	background-color: darkgrey;
+}
+
+
+.clear {
+	background-color: red;
+}
+
+.equals {
+	grid-row: 2 / span 4;
+	grid-column : 4 / span 1;
+	background-color: green;
+}
+
+.clear, .equals {
+	color: white;
+}
+
+@media screen and (max-width: 600px) {
+	.calculator {
+		height: 300px;
+		width: 300px;
+	}
+}
